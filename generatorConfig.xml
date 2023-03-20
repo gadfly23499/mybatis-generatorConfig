@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <context id="MysqlContext" targetRuntime="MyBatis3Simple" defaultModelType="flat">
+        <property name="beginningDelimiter" value="`"/>
+        <property name="endingDelimiter" value="`"/>
+
+        <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
+            <property name="mappers" value="com.imooc.utils.MyMapper"/>
+        </plugin>
+<!--oracle驱动-->
+        <!--<jdbcConnection driverClass="oracle.jdbc.OracleDriver"-->
+                        <!--connectionURL="jdbc:oracle:thin:@//182.61.34.61:1521/helowin"-->
+                        <!--userId="Dfham2020"-->
+                        <!--password="Dfham2020">-->
+        <!--</jdbcConnection>-->
+
+        <jdbcConnection driverClass="org.postgresql.Driver"
+                        connectionURL="jdbc:postgresql://32.110.160.144:23400/trafodion"
+                        userId="qianbase"
+                        password="Qbase@3812">
+        </jdbcConnection>
+
+        <!-- 对应生成的pojo所在包 -->
+        <javaModelGenerator targetPackage="com.imooc.pojo" targetProject="src/main/java"/>
+
+		<!-- 对应生成的mapper所在目录 -->
+        <sqlMapGenerator targetPackage="mapper" targetProject="src/main/resources"/>
+
+		<!-- 配置mapper对应的java映射 -->
+        <javaClientGenerator targetPackage="com.imooc.mapper" targetProject="src/main/java"
+        type="XMLMAPPER"/>
+
+<!--        表单名 小写-->
+        <table tableName="column_data"></table>
+
+    </context>
+</generatorConfiguration>

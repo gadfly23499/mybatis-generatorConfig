@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.imooc.mapper.CelebrityColumnMapper" >
+  <resultMap id="BaseResultMap" type="com.imooc.pojo.CelebrityColumn" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="CEL_ID" property="celId" jdbcType="VARCHAR" />
+    <result column="CEL_NAME" property="celName" jdbcType="VARCHAR" />
+    <result column="CEL_DESC" property="celDesc" jdbcType="VARCHAR" />
+    <result column="HEAD_IMG" property="headImg" jdbcType="VARCHAR" />
+    <result column="BACK_IMG" property="backImg" jdbcType="VARCHAR" />
+    <result column="COL_NAME" property="colName" jdbcType="VARCHAR" />
+    <result column="COL_DESC" property="colDesc" jdbcType="VARCHAR" />
+    <result column="CREATE_TIME" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="UPDATE_TIME" property="updateTime" jdbcType="TIMESTAMP" />
+    <result column="CREATE_USER" property="createUser" jdbcType="VARCHAR" />
+    <result column="UPDATE_USER" property="updateUser" jdbcType="VARCHAR" />
+    <result column="RECORD" property="record" jdbcType="CLOB" />
+  </resultMap>
+</mapper>
